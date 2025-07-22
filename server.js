@@ -6,9 +6,15 @@ const resetRoutes = require('./routes/reset.routes');
 const favoritesRoutes = require('./routes/favorites.routes');
 const cors = require('cors');
 
+
 const app = express();
 
-app.use(cors());
+// Cambia la URL por la de tu frontend real en Vercel
+const allowedOrigins = ['https://y-tfav-backend.vercel.app'];
+app.use(cors({
+  origin: allowedOrigins,
+  credentials: true
+}));
 app.use(express.json());
 
 //rutas
