@@ -18,9 +18,9 @@ app.use(cors({
 app.use(express.json());
 
 //rutas
-app.use('/auth', authRoutes);
-app.use('/auth', resetRoutes);
-app.use('/favorites', favoritesRoutes);
+app.use('/api/auth', authRoutes);
+app.use('/api/auth', resetRoutes);
+app.use('/api/favorites', favoritesRoutes);
 
 
 const PORT = process.env.PORT || 3000;
