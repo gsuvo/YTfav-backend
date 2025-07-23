@@ -22,7 +22,13 @@ app.use('/auth', authRoutes);
 app.use('/auth', resetRoutes);
 app.use('/favorites', favoritesRoutes);
 
+
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () =>
-  console.log(`Servidor en http://localhost:${process.env.PORT}`)
-);
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(PORT, () =>
+    console.log(`Servidor en http://localhost:${process.env.PORT}`)
+  );
+}
+
+// Exporta el handler para Vercel
+module.exports = app;
