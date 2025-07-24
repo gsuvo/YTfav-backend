@@ -4,7 +4,7 @@ const nodemailer = require('nodemailer');
 const bcrypt = require('bcryptjs');
 
 const JWT_SECRET = process.env.JWT_SECRET || 'changeme';
-const CLIENT_URL = process.env.CLIENT_URL ;
+const CLIENT_URL = process.env.CLIENT_URL || 'http://localhost:4200';
 
 exports.forgotPassword = async (req, res) => {
   const { email } = req.body;
