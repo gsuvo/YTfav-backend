@@ -10,7 +10,7 @@ const cors = require('cors');
 const app = express();
 
 // Cambia la URL por la de tu frontend real en Vercel
-const allowedOrigins = ['https://y-tfav-backend.vercel.app'];
+const allowedOrigins = ['https://y-tfav-frontend.vercel.app'];
 app.use(cors({
   origin: allowedOrigins,
   credentials: true
